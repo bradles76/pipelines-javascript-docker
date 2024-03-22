@@ -4,9 +4,6 @@ trigger:
 pool:
   vmImage: 'ubuntu-latest' 
 
-variables:
-  imageName: 'pipelines-javascript-docker'
-
 steps:
  - task: Docker@2
    displayName: Build an image
@@ -14,3 +11,11 @@ steps:
      repository: $(imageName)
      command: build
      Dockerfile: app/Dockerfile
+
+variables:
+  imageName: 
+  - task: ErmeticContainerImageScan@1
+    inputs:
+      apiToken: '$(TENABLE_API_TOKEN)'
+      apiUrl: 'https://au.app.ermetic.com'
+      name: 'pipelines-javascript-docker'
