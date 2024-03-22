@@ -12,10 +12,8 @@ steps:
      command: build
      Dockerfile: app/Dockerfile
 
-variables:
-  imageName: 
-  - task: ErmeticContainerImageScan@1
-    inputs:
+ - task: ErmeticContainerImageScan@1
+   inputs:
       apiToken: '$(TENABLE_API_TOKEN)'
       apiUrl: 'https://au.app.ermetic.com'
       name: 'pipelines-javascript-docker'
