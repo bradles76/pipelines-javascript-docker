@@ -20,3 +20,5 @@ steps:
       apiToken: '$(TENABLE_API_TOKEN)'
       apiUrl: 'https://au.app.ermetic.com'
       name: 'pipelines-javascript-docker'
+      registryUsername: ermeticdemo
+      registryPassword: KqKMp/nilaME8K8WlmWcNJs7gK9Rev0VGAXlMcEkX1+ACRC+BnSF
