@@ -28,5 +28,5 @@ steps:
    inputs:
       containerRegistry: 'ermeticdemo'
       repository: 'abdockerapp.azurecr.io'
-      command: 'build'
+      command: 'push'
       Dockerfile: '**/Dockerfile'
